@@ -83,6 +83,7 @@ namespace Api_Services_TEAMCELL.Services
             {
                 var employee = _dbContext.Employee.FirstOrDefault(x => x.IdEmployee == idEmployee);
                 employee.Status = false;
+                _dbContext.SaveChanges();
                 return true;
             }
             catch (Exception)

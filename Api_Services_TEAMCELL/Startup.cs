@@ -33,8 +33,7 @@ namespace Api_Services_TEAMCELL
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            var connectionString = "Data Source=DESKTOP-EH8GUC7;Initial Catalog=PV_TEAMCELL;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False";
-
+            var connectionString = "Data Source=DESKTOP-EH8GUC7;Initial Catalog=pruebaTeam;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False";
             services.AddDbContext<ApiDBContext>(options => options.UseSqlServer(connectionString));
             services.AddTransient<EmployeeService,EmployeeService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
