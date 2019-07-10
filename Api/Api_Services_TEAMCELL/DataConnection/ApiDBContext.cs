@@ -14,10 +14,12 @@ namespace Api_Services_TEAMCELL.DataConnection
         }
 
         public virtual DbSet<Employee> Employee { get; set; }
+        public virtual DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelB)
         {
             new Employee.Map(modelB.Entity<Employee>().ToTable("Employee",schema :"RRHH"));
+            new User.Map(modelB.Entity<User>().ToTable("Users", schema: "Users"));
 
             base.OnModelCreating(modelB);
         }

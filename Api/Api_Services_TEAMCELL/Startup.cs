@@ -36,6 +36,7 @@ namespace Api_Services_TEAMCELL
             var connectionString = "Data Source=DESKTOP-EH8GUC7;Initial Catalog=PV_TEAMCELL;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False";
             services.AddDbContext<ApiDBContext>(options => options.UseSqlServer(connectionString));
             services.AddTransient<EmployeeService,EmployeeService>();
+            services.AddTransient<UserService, UserService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 
             services.AddCors( options =>

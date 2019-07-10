@@ -9,9 +9,9 @@ namespace Api_Services_TEAMCELL.Services
     public class EmployeeService
     {
         public readonly ApiDBContext _dbContext;
-        public EmployeeService(ApiDBContext dBContext)
+        public EmployeeService(ApiDBContext dbContext)
         {
-            _dbContext = dBContext;
+            _dbContext = dbContext;
         }
 
         public List<Employee> getEmployeesActive()
