@@ -79,9 +79,9 @@ namespace Api_Services_TEAMCELL.Controllers
         public IActionResult tryLogin(string username,string password)
         {
             if (_userService.tryLogin(username, password))
-                return Ok();
+                return Ok("Ok");
             else
-                return BadRequest();
+                return Ok("Usuario Invalido");
         }
 
     }
