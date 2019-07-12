@@ -63,6 +63,76 @@ namespace TeamCellApplication.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baseline_exit_to_app_black_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_exit_to_app_black_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_minimize_black_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_minimize_black_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_open_in_browser_black_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_open_in_browser_black_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_open_in_new_black_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_open_in_new_black_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_reorder_black_18dp1 {
+            get {
+                object obj = ResourceManager.GetObject("baseline_reorder_black_18dp1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Vectorial {
+            get {
+                object obj = ResourceManager.GetObject("Logo Vectorial", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Vectorial1 {
+            get {
+                object obj = ResourceManager.GetObject("Logo Vectorial1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TeamCell {
             get {
                 object obj = ResourceManager.GetObject("TeamCell", resourceCulture);

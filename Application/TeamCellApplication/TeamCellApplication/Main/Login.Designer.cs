@@ -43,19 +43,20 @@
             // 
             // panelImage
             // 
-            this.panelImage.BackgroundImage = global::TeamCellApplication.Properties.Resources.TeamCell;
             resources.ApplyResources(this.panelImage, "panelImage");
             this.panelImage.Name = "panelImage";
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl1.Appearance.Font")));
+            this.labelControl1.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.labelControl1, "labelControl1");
             this.labelControl1.Name = "labelControl1";
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl2.Appearance.Font")));
+            this.labelControl2.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.labelControl2, "labelControl2");
             this.labelControl2.Name = "labelControl2";
             // 
@@ -82,7 +83,7 @@
             this.btnLogin.Appearance.Options.UseFont = true;
             this.btnLogin.Appearance.Options.UseForeColor = true;
             this.btnLogin.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
+            this.btnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.Image")));
             resources.ApplyResources(this.btnLogin, "btnLogin");
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
