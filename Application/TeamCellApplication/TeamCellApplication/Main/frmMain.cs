@@ -82,5 +82,9 @@ namespace TeamCellApplication.Main
             openFormInPanel(new frmUsers());
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openFormInPanel(new frmEmployee());
+        }
     }
 }

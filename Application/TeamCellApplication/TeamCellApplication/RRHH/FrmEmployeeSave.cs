@@ -10,18 +10,21 @@ using System.Windows.Forms;
 
 namespace TeamCellApplication.RRHH
 {
-    public partial class frmEmployee : Form
+    public partial class FrmEmployeeSave : Form
     {
-        public frmEmployee()
+        public FrmEmployeeSave()
         {
             InitializeComponent();
         }
 
-        private void btnNew_Click(object sender, EventArgs e)
+        private void labelControl4_Click(object sender, EventArgs e)
         {
-            FrmEmployeeSave frm = new FrmEmployeeSave();
-            frm.Show();
-            
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
