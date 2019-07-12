@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TeamCellApplication.RRHH;
+
 
 namespace TeamCellApplication
 {
@@ -16,7 +18,7 @@ namespace TeamCellApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main.Login());
+            Application.Run(new FrmEmployee());
         }
     }
 }
