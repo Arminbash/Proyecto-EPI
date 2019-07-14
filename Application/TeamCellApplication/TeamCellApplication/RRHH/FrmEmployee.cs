@@ -19,9 +19,11 @@ namespace TeamCellApplication.RRHH
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            FrmEmployeeSave frm = new FrmEmployeeSave();
-            frm.Show();
-            
+        }
+
+        private void frmEmployee_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

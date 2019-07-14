@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.VerticalMenu = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEmployee = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.TittleBar = new System.Windows.Forms.Panel();
@@ -55,7 +55,7 @@
             // 
             this.VerticalMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
             this.VerticalMenu.Controls.Add(this.button2);
-            this.VerticalMenu.Controls.Add(this.button1);
+            this.VerticalMenu.Controls.Add(this.btnEmployee);
             this.VerticalMenu.Controls.Add(this.btnUsers);
             this.VerticalMenu.Controls.Add(this.Logo);
             this.VerticalMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -80,22 +80,22 @@
             this.button2.Text = "Inicio";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnEmployee
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 132);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 40);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Empleados";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEmployee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployee.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
+            this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployee.Location = new System.Drawing.Point(0, 132);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(250, 40);
+            this.btnEmployee.TabIndex = 1;
+            this.btnEmployee.Text = "Empleados";
+            this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnUsers
             // 
@@ -249,6 +249,6 @@
         private System.Windows.Forms.PictureBox btnRestore;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEmployee;
     }
 }
