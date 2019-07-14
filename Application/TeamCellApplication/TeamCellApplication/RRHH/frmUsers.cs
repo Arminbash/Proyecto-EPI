@@ -16,5 +16,10 @@ namespace TeamCellApplication.RRHH
         {
             InitializeComponent();
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
