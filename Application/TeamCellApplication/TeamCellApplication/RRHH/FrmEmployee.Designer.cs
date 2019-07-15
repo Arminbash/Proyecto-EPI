@@ -38,9 +38,9 @@
             this.deBirths = new DevExpress.XtraEditors.DateEdit();
             this.cbCity = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtCardIndentificador = new DevExpress.XtraEditors.TextEdit();
-            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnClear = new DevExpress.XtraEditors.SimpleButton();
             this.txtSecondSurname = new DevExpress.XtraEditors.TextEdit();
-            this.btnNew = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtFirstSurname = new DevExpress.XtraEditors.TextEdit();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.txtSecondName = new DevExpress.XtraEditors.TextEdit();
@@ -54,7 +54,6 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deBirths.Properties.CalendarTimeProperties)).BeginInit();
@@ -92,16 +91,15 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnCancel);
             this.tabPage1.Controls.Add(this.lblEmpleado);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.deBirths);
             this.tabPage1.Controls.Add(this.cbCity);
             this.tabPage1.Controls.Add(this.txtCardIndentificador);
-            this.tabPage1.Controls.Add(this.btnDelete);
+            this.tabPage1.Controls.Add(this.btnClear);
             this.tabPage1.Controls.Add(this.txtSecondSurname);
-            this.tabPage1.Controls.Add(this.btnNew);
+            this.tabPage1.Controls.Add(this.btnSave);
             this.tabPage1.Controls.Add(this.txtFirstSurname);
             this.tabPage1.Controls.Add(this.btnEdit);
             this.tabPage1.Controls.Add(this.txtSecondName);
@@ -175,23 +173,23 @@
             this.txtCardIndentificador.Size = new System.Drawing.Size(174, 20);
             this.txtCardIndentificador.TabIndex = 12;
             // 
-            // btnDelete
+            // btnClear
             // 
-            this.btnDelete.Appearance.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnDelete.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Appearance.Options.UseBackColor = true;
-            this.btnDelete.Appearance.Options.UseFont = true;
-            this.btnDelete.Appearance.Options.UseForeColor = true;
-            this.btnDelete.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
-            this.btnDelete.AppearanceHovered.Options.UseBackColor = true;
-            this.btnDelete.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(657, 351);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(112, 41);
-            this.btnDelete.TabIndex = 18;
-            this.btnDelete.Text = "Limpiar";
+            this.btnClear.Appearance.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnClear.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnClear.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Appearance.Options.UseBackColor = true;
+            this.btnClear.Appearance.Options.UseFont = true;
+            this.btnClear.Appearance.Options.UseForeColor = true;
+            this.btnClear.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnClear.AppearanceHovered.Options.UseBackColor = true;
+            this.btnClear.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
+            this.btnClear.Location = new System.Drawing.Point(669, 350);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(112, 41);
+            this.btnClear.TabIndex = 18;
+            this.btnClear.Text = "Limpiar";
             // 
             // txtSecondSurname
             // 
@@ -200,24 +198,24 @@
             this.txtSecondSurname.Size = new System.Drawing.Size(174, 20);
             this.txtSecondSurname.TabIndex = 10;
             // 
-            // btnNew
+            // btnSave
             // 
-            this.btnNew.Appearance.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnNew.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnNew.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnNew.Appearance.Options.UseBackColor = true;
-            this.btnNew.Appearance.Options.UseFont = true;
-            this.btnNew.Appearance.Options.UseForeColor = true;
-            this.btnNew.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
-            this.btnNew.AppearanceHovered.Options.UseBackColor = true;
-            this.btnNew.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.Image")));
-            this.btnNew.Location = new System.Drawing.Point(421, 351);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(112, 41);
-            this.btnNew.TabIndex = 16;
-            this.btnNew.Text = "Guardar";
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            this.btnSave.Appearance.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnSave.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSave.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Appearance.Options.UseBackColor = true;
+            this.btnSave.Appearance.Options.UseFont = true;
+            this.btnSave.Appearance.Options.UseForeColor = true;
+            this.btnSave.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
+            this.btnSave.AppearanceHovered.Options.UseBackColor = true;
+            this.btnSave.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.Image")));
+            this.btnSave.Location = new System.Drawing.Point(433, 350);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(112, 41);
+            this.btnSave.TabIndex = 16;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtFirstSurname
             // 
@@ -238,7 +236,7 @@
             this.btnEdit.AppearanceHovered.Options.UseBackColor = true;
             this.btnEdit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(539, 351);
+            this.btnEdit.Location = new System.Drawing.Point(551, 350);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(112, 41);
             this.btnEdit.TabIndex = 17;
@@ -347,7 +345,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1025, 521);
+            this.tabPage2.Size = new System.Drawing.Size(1025, 483);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lista de Empleados Activo";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -356,28 +354,10 @@
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1025, 521);
+            this.tabPage3.Size = new System.Drawing.Size(1025, 483);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Lista de Empleados Inactivos";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Appearance.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnCancel.Appearance.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Appearance.Options.UseBackColor = true;
-            this.btnCancel.Appearance.Options.UseFont = true;
-            this.btnCancel.Appearance.Options.UseForeColor = true;
-            this.btnCancel.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
-            this.btnCancel.AppearanceHovered.Options.UseBackColor = true;
-            this.btnCancel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(775, 351);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(112, 41);
-            this.btnCancel.TabIndex = 44;
-            this.btnCancel.Text = "Cancelar";
             // 
             // frmEmployee
             // 
@@ -412,9 +392,9 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private DevExpress.XtraEditors.SimpleButton btnDelete;
+        private DevExpress.XtraEditors.SimpleButton btnClear;
         private DevExpress.XtraEditors.SimpleButton btnEdit;
-        private DevExpress.XtraEditors.SimpleButton btnNew;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
         private System.Windows.Forms.TabPage tabPage1;
         private DevExpress.XtraEditors.ComboBoxEdit cbCity;
         private DevExpress.XtraEditors.TextEdit txtCardIndentificador;
@@ -433,6 +413,5 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblEmpleado;
-        private DevExpress.XtraEditors.SimpleButton btnCancel;
     }
 }

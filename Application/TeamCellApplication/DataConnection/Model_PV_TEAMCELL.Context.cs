@@ -27,5 +27,10 @@ namespace DataConnection
     
         public DbSet<Employee> Employee { get; set; }
         public DbSet<Users> Users { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<City> City { get; set; }
+        public DbSet<Country> Country { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<Provider> Provider { get; set; }
     }
 }

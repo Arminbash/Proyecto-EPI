@@ -8,6 +8,15 @@
         <EntityTypeShape EntityType="PV_TEAMCELLModel.Employee" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="PV_TEAMCELLModel.Users" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="PV_TEAMCELLModel.FK__Users__IdEmploye__0BC6C43E" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PV_TEAMCELLModel.Category" Width="1.5" PointX="5.25" PointY="8.375" />
+        <EntityTypeShape EntityType="PV_TEAMCELLModel.City" Width="1.5" PointX="3" PointY="5.25" />
+        <EntityTypeShape EntityType="PV_TEAMCELLModel.Country" Width="1.5" PointX="0.75" PointY="5.5" />
+        <EntityTypeShape EntityType="PV_TEAMCELLModel.Product" Width="1.5" PointX="7.5" PointY="5" />
+        <EntityTypeShape EntityType="PV_TEAMCELLModel.Provider" Width="1.5" PointX="5.25" PointY="5.125" />
+        <AssociationConnector Association="PV_TEAMCELLModel.FK__Product__IdCateg__22AA2996" />
+        <AssociationConnector Association="PV_TEAMCELLModel.FK__City__IdCountry__182C9B23" />
+        <AssociationConnector Association="PV_TEAMCELLModel.FK__Provider__IdCity__1CF15040" />
+        <AssociationConnector Association="PV_TEAMCELLModel.FK__Product__IdProvi__21B6055D" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

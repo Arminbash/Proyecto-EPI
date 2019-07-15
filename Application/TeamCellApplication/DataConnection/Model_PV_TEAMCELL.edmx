@@ -4,7 +4,55 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PV_TEAMCELLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PV_TEAMCELLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="IdCategory" />
+          </Key>
+          <Property Name="IdCategory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+          <Property Name="Estatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="IdCiy" />
+          </Key>
+          <Property Name="IdCiy" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="IdCountry" Type="int" />
+          <Property Name="Estatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="IdCountry" />
+          </Key>
+          <Property Name="IdCountry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Estatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="IdProduct" />
+          </Key>
+          <Property Name="IdProduct" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="200" />
+          <Property Name="IdProvider" Type="int" />
+          <Property Name="IdCategory" Type="int" />
+          <Property Name="costing" Type="varchar" MaxLength="100" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+          <Property Name="Estatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="Provider">
+          <Key>
+            <PropertyRef Name="IdProvider" />
+          </Key>
+          <Property Name="IdProvider" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="200" />
+          <Property Name="IdCity" Type="int" />
+          <Property Name="Address" Type="varchar" MaxLength="200" />
+          <Property Name="Estatus" Type="bit" />
+        </EntityType>
         <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="IdEmployee" />
@@ -30,6 +78,54 @@
           <Property Name="IdEmployee" Type="int" />
           <Property Name="Status" Type="bit" />
         </EntityType>
+        <Association Name="FK__City__IdCountry__182C9B23">
+          <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+          <End Role="City" Type="Self.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="IdCountry" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="IdCountry" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Product__IdCateg__22AA2996">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="IdCategory" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="IdCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Product__IdProvi__21B6055D">
+          <End Role="Provider" Type="Self.Provider" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provider">
+              <PropertyRef Name="IdProvider" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="IdProvider" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Provider__IdCity__1CF15040">
+          <End Role="City" Type="Self.City" Multiplicity="0..1" />
+          <End Role="Provider" Type="Self.Provider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="IdCiy" />
+            </Principal>
+            <Dependent Role="Provider">
+              <PropertyRef Name="IdCity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Users__IdEmploye__0BC6C43E">
           <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
           <End Role="Users" Type="Self.Users" Multiplicity="*" />
@@ -43,15 +139,35 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="PV_TEAMCELLModelStoreContainer">
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="PV" store:Type="Tables" />
+          <EntitySet Name="City" EntityType="Self.City" Schema="PV" store:Type="Tables" />
+          <EntitySet Name="Country" EntityType="Self.Country" Schema="PV" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="PV" store:Type="Tables" />
+          <EntitySet Name="Provider" EntityType="Self.Provider" Schema="PV" store:Type="Tables" />
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="RRHH" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="Users" store:Type="Tables" />
+          <AssociationSet Name="FK__City__IdCountry__182C9B23" Association="Self.FK__City__IdCountry__182C9B23">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="City" EntitySet="City" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Product__IdCateg__22AA2996" Association="Self.FK__Product__IdCateg__22AA2996">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Product__IdProvi__21B6055D" Association="Self.FK__Product__IdProvi__21B6055D">
+            <End Role="Provider" EntitySet="Provider" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Provider__IdCity__1CF15040" Association="Self.FK__Provider__IdCity__1CF15040">
+            <End Role="City" EntitySet="City" />
+            <End Role="Provider" EntitySet="Provider" />
+          </AssociationSet>
           <AssociationSet Name="FK__Users__IdEmploye__0BC6C43E" Association="Self.FK__Users__IdEmploye__0BC6C43E">
             <End Role="Employee" EntitySet="Employee" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PV_TEAMCELLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -101,7 +217,132 @@
             <End Role="Employee" EntitySet="Employee" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
+          <EntitySet Name="Category" EntityType="PV_TEAMCELLModel.Category" />
+          <EntitySet Name="City" EntityType="PV_TEAMCELLModel.City" />
+          <EntitySet Name="Country" EntityType="PV_TEAMCELLModel.Country" />
+          <EntitySet Name="Product" EntityType="PV_TEAMCELLModel.Product" />
+          <EntitySet Name="Provider" EntityType="PV_TEAMCELLModel.Provider" />
+          <AssociationSet Name="FK__Product__IdCateg__22AA2996" Association="PV_TEAMCELLModel.FK__Product__IdCateg__22AA2996">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK__City__IdCountry__182C9B23" Association="PV_TEAMCELLModel.FK__City__IdCountry__182C9B23">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="City" EntitySet="City" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Provider__IdCity__1CF15040" Association="PV_TEAMCELLModel.FK__Provider__IdCity__1CF15040">
+            <End Role="City" EntitySet="City" />
+            <End Role="Provider" EntitySet="Provider" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Product__IdProvi__21B6055D" Association="PV_TEAMCELLModel.FK__Product__IdProvi__21B6055D">
+            <End Role="Provider" EntitySet="Provider" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="IdCategory" />
+          </Key>
+          <Property Name="IdCategory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Estatus" Type="Boolean" />
+          <NavigationProperty Name="Product" Relationship="PV_TEAMCELLModel.FK__Product__IdCateg__22AA2996" FromRole="Category" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="IdCiy" />
+          </Key>
+          <Property Name="IdCiy" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IdCountry" Type="Int32" />
+          <Property Name="Estatus" Type="Boolean" />
+          <NavigationProperty Name="Country" Relationship="PV_TEAMCELLModel.FK__City__IdCountry__182C9B23" FromRole="City" ToRole="Country" />
+          <NavigationProperty Name="Provider" Relationship="PV_TEAMCELLModel.FK__Provider__IdCity__1CF15040" FromRole="City" ToRole="Provider" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="IdCountry" />
+          </Key>
+          <Property Name="IdCountry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Estatus" Type="Boolean" />
+          <NavigationProperty Name="City" Relationship="PV_TEAMCELLModel.FK__City__IdCountry__182C9B23" FromRole="Country" ToRole="City" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="IdProduct" />
+          </Key>
+          <Property Name="IdProduct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IdProvider" Type="Int32" />
+          <Property Name="IdCategory" Type="Int32" />
+          <Property Name="costing" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Estatus" Type="Boolean" />
+          <NavigationProperty Name="Category" Relationship="PV_TEAMCELLModel.FK__Product__IdCateg__22AA2996" FromRole="Product" ToRole="Category" />
+          <NavigationProperty Name="Provider" Relationship="PV_TEAMCELLModel.FK__Product__IdProvi__21B6055D" FromRole="Product" ToRole="Provider" />
+        </EntityType>
+        <EntityType Name="Provider">
+          <Key>
+            <PropertyRef Name="IdProvider" />
+          </Key>
+          <Property Name="IdProvider" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IdCity" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Estatus" Type="Boolean" />
+          <NavigationProperty Name="City" Relationship="PV_TEAMCELLModel.FK__Provider__IdCity__1CF15040" FromRole="Provider" ToRole="City" />
+          <NavigationProperty Name="Product" Relationship="PV_TEAMCELLModel.FK__Product__IdProvi__21B6055D" FromRole="Provider" ToRole="Product" />
+        </EntityType>
+        <Association Name="FK__Product__IdCateg__22AA2996">
+          <End Type="PV_TEAMCELLModel.Category" Role="Category" Multiplicity="0..1" />
+          <End Type="PV_TEAMCELLModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="IdCategory" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="IdCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__City__IdCountry__182C9B23">
+          <End Type="PV_TEAMCELLModel.Country" Role="Country" Multiplicity="0..1" />
+          <End Type="PV_TEAMCELLModel.City" Role="City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="IdCountry" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="IdCountry" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Provider__IdCity__1CF15040">
+          <End Type="PV_TEAMCELLModel.City" Role="City" Multiplicity="0..1" />
+          <End Type="PV_TEAMCELLModel.Provider" Role="Provider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="IdCiy" />
+            </Principal>
+            <Dependent Role="Provider">
+              <PropertyRef Name="IdCity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Product__IdProvi__21B6055D">
+          <End Type="PV_TEAMCELLModel.Provider" Role="Provider" Multiplicity="0..1" />
+          <End Type="PV_TEAMCELLModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provider">
+              <PropertyRef Name="IdProvider" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="IdProvider" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -132,6 +373,59 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Category">
+            <EntityTypeMapping TypeName="PV_TEAMCELLModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdCategory" ColumnName="IdCategory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="City">
+            <EntityTypeMapping TypeName="PV_TEAMCELLModel.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="IdCountry" ColumnName="IdCountry" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdCiy" ColumnName="IdCiy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Country">
+            <EntityTypeMapping TypeName="PV_TEAMCELLModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdCountry" ColumnName="IdCountry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product">
+            <EntityTypeMapping TypeName="PV_TEAMCELLModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="costing" ColumnName="costing" />
+                <ScalarProperty Name="IdCategory" ColumnName="IdCategory" />
+                <ScalarProperty Name="IdProvider" ColumnName="IdProvider" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Provider">
+            <EntityTypeMapping TypeName="PV_TEAMCELLModel.Provider">
+              <MappingFragment StoreEntitySet="Provider">
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="IdCity" ColumnName="IdCity" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdProvider" ColumnName="IdProvider" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
