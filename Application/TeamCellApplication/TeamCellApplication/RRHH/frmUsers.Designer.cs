@@ -32,8 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -47,6 +45,8 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbIdEmployee.Properties)).BeginInit();
@@ -100,25 +100,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Detalle Usuario";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1025, 521);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Lista de Usuarios Activos";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1025, 521);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Lista de Usuarios Inactivos";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // lblUsuario
             // 
@@ -277,6 +258,25 @@
             this.labelControl5.Size = new System.Drawing.Size(104, 18);
             this.labelControl5.TabIndex = 28;
             this.labelControl5.Text = "Codigo Empleado";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1025, 521);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Lista de Usuarios Activos";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1025, 521);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Lista de Usuarios Inactivos";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // frmUsers
             // 

@@ -30,35 +30,37 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.VerticalMenu = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnEmployee = new System.Windows.Forms.Button();
-            this.btnUsers = new System.Windows.Forms.Button();
-            this.Logo = new System.Windows.Forms.PictureBox();
+            this.officeNavigationBar1 = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
+            this.navigationBarItem1 = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItem2 = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItem3 = new DevExpress.XtraBars.Navigation.NavigationBarItem();
             this.TittleBar = new System.Windows.Forms.Panel();
+            this.ContainerPanel = new System.Windows.Forms.Panel();
             this.btnMaximize = new System.Windows.Forms.PictureBox();
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.btnRestore = new System.Windows.Forms.PictureBox();
-            this.ContainerPanel = new System.Windows.Forms.Panel();
-            this.officeNavigationBar1 = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
-            this.navigationBarItem1 = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-            this.navigationBarItem2 = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-            this.navigationBarItem3 = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnEmployee = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.VerticalMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar1)).BeginInit();
             this.TittleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestore)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // VerticalMenu
             // 
             this.VerticalMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.VerticalMenu.Controls.Add(this.button1);
             this.VerticalMenu.Controls.Add(this.officeNavigationBar1);
             this.VerticalMenu.Controls.Add(this.button2);
             this.VerticalMenu.Controls.Add(this.btnEmployee);
@@ -70,65 +72,34 @@
             this.VerticalMenu.Size = new System.Drawing.Size(250, 650);
             this.VerticalMenu.TabIndex = 0;
             // 
-            // button2
+            // officeNavigationBar1
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 40);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Inicio";
-            this.button2.UseVisualStyleBackColor = true;
+            this.officeNavigationBar1.AutoSize = false;
+            this.officeNavigationBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.officeNavigationBar1.Items.AddRange(new DevExpress.XtraBars.Navigation.NavigationBarItem[] {
+            this.navigationBarItem1,
+            this.navigationBarItem2,
+            this.navigationBarItem3});
+            this.officeNavigationBar1.Location = new System.Drawing.Point(0, 605);
+            this.officeNavigationBar1.Name = "officeNavigationBar1";
+            this.officeNavigationBar1.Size = new System.Drawing.Size(250, 45);
+            this.officeNavigationBar1.TabIndex = 3;
+            this.officeNavigationBar1.Text = "officeNavigationBar1";
             // 
-            // btnEmployee
+            // navigationBarItem1
             // 
-            this.btnEmployee.FlatAppearance.BorderSize = 0;
-            this.btnEmployee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployee.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
-            this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(0, 132);
-            this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(250, 40);
-            this.btnEmployee.TabIndex = 1;
-            this.btnEmployee.Text = "Empleados";
-            this.btnEmployee.UseVisualStyleBackColor = true;
-            this.btnEmployee.Click += new System.EventHandler(this.button1_Click);
+            this.navigationBarItem1.Name = "navigationBarItem1";
+            this.navigationBarItem1.Text = "Item1";
             // 
-            // btnUsers
+            // navigationBarItem2
             // 
-            this.btnUsers.FlatAppearance.BorderSize = 0;
-            this.btnUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsers.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
-            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(0, 96);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(250, 40);
-            this.btnUsers.TabIndex = 0;
-            this.btnUsers.Text = "Usuarios";
-            this.btnUsers.UseVisualStyleBackColor = true;
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            this.navigationBarItem2.Name = "navigationBarItem2";
+            this.navigationBarItem2.Text = "Item2";
             // 
-            // Logo
+            // navigationBarItem3
             // 
-            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(0, 3);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(244, 47);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Logo.TabIndex = 0;
-            this.Logo.TabStop = false;
+            this.navigationBarItem3.Name = "navigationBarItem3";
+            this.navigationBarItem3.Text = "Item3";
             // 
             // TittleBar
             // 
@@ -144,6 +115,15 @@
             this.TittleBar.Size = new System.Drawing.Size(1050, 50);
             this.TittleBar.TabIndex = 1;
             this.TittleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TittleBar_MouseDown_1);
+            // 
+            // ContainerPanel
+            // 
+            this.ContainerPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.ContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContainerPanel.Location = new System.Drawing.Point(250, 50);
+            this.ContainerPanel.Name = "ContainerPanel";
+            this.ContainerPanel.Size = new System.Drawing.Size(1050, 600);
+            this.ContainerPanel.TabIndex = 2;
             // 
             // btnMaximize
             // 
@@ -209,43 +189,82 @@
             this.btnRestore.TabStop = false;
             this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click_1);
             // 
-            // ContainerPanel
+            // button1
             // 
-            this.ContainerPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.ContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ContainerPanel.Location = new System.Drawing.Point(250, 50);
-            this.ContainerPanel.Name = "ContainerPanel";
-            this.ContainerPanel.Size = new System.Drawing.Size(1050, 600);
-            this.ContainerPanel.TabIndex = 2;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 169);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(250, 40);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Producto";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // officeNavigationBar1
+            // button2
             // 
-            this.officeNavigationBar1.AutoSize = false;
-            this.officeNavigationBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.officeNavigationBar1.Items.AddRange(new DevExpress.XtraBars.Navigation.NavigationBarItem[] {
-            this.navigationBarItem1,
-            this.navigationBarItem2,
-            this.navigationBarItem3});
-            this.officeNavigationBar1.Location = new System.Drawing.Point(0, 605);
-            this.officeNavigationBar1.Name = "officeNavigationBar1";
-            this.officeNavigationBar1.Size = new System.Drawing.Size(250, 45);
-            this.officeNavigationBar1.TabIndex = 3;
-            this.officeNavigationBar1.Text = "officeNavigationBar1";
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 56);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(250, 40);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Inicio";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // navigationBarItem1
+            // btnEmployee
             // 
-            this.navigationBarItem1.Name = "navigationBarItem1";
-            this.navigationBarItem1.Text = "Item1";
+            this.btnEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEmployee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployee.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
+            this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployee.Location = new System.Drawing.Point(0, 132);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(250, 40);
+            this.btnEmployee.TabIndex = 1;
+            this.btnEmployee.Text = "Empleados";
+            this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.button1_Click);
             // 
-            // navigationBarItem2
+            // btnUsers
             // 
-            this.navigationBarItem2.Name = "navigationBarItem2";
-            this.navigationBarItem2.Text = "Item2";
+            this.btnUsers.FlatAppearance.BorderSize = 0;
+            this.btnUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
+            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.Location = new System.Drawing.Point(0, 96);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(250, 40);
+            this.btnUsers.TabIndex = 0;
+            this.btnUsers.Text = "Usuarios";
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
-            // navigationBarItem3
+            // Logo
             // 
-            this.navigationBarItem3.Name = "navigationBarItem3";
-            this.navigationBarItem3.Text = "Item3";
+            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
+            this.Logo.Location = new System.Drawing.Point(0, 3);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(244, 47);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Logo.TabIndex = 0;
+            this.Logo.TabStop = false;
             // 
             // frmMain
             // 
@@ -260,14 +279,14 @@
             this.Text = "frmMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.VerticalMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar1)).EndInit();
             this.TittleBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestore)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,5 +309,6 @@
         private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItem1;
         private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItem2;
         private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItem3;
+        private System.Windows.Forms.Button button1;
     }
 }
