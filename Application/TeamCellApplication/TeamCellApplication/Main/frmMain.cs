@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using TeamCellApplication.Product;
 using TeamCellApplication.RRHH;
 
 namespace TeamCellApplication.Main
@@ -85,6 +86,11 @@ namespace TeamCellApplication.Main
         private void button1_Click(object sender, EventArgs e)
         {
             openFormInPanel(new frmEmployee());
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            openFormInPanel(new frmProduct());
         }
     }
 }
