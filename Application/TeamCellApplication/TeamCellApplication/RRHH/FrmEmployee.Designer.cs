@@ -54,6 +54,7 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.seIdEmpleado = new DevExpress.XtraEditors.SpinEdit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deBirths.Properties.CalendarTimeProperties)).BeginInit();
@@ -64,6 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtFirstSurname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSecondName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFirstname.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seIdEmpleado.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,6 +93,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.seIdEmpleado);
             this.tabPage1.Controls.Add(this.lblEmpleado);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.panel1);
@@ -184,12 +187,13 @@
             this.btnClear.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
             this.btnClear.AppearanceHovered.Options.UseBackColor = true;
             this.btnClear.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
+            this.btnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.ImageOptions.Image")));
             this.btnClear.Location = new System.Drawing.Point(669, 350);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(112, 41);
             this.btnClear.TabIndex = 18;
             this.btnClear.Text = "Limpiar";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txtSecondSurname
             // 
@@ -209,7 +213,7 @@
             this.btnSave.AppearanceHovered.BackColor = System.Drawing.Color.Gray;
             this.btnSave.AppearanceHovered.Options.UseBackColor = true;
             this.btnSave.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.Image")));
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.Location = new System.Drawing.Point(433, 350);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(112, 41);
@@ -359,6 +363,21 @@
             this.tabPage3.Text = "Lista de Empleados Inactivos";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // seIdEmpleado
+            // 
+            this.seIdEmpleado.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.seIdEmpleado.Location = new System.Drawing.Point(419, 109);
+            this.seIdEmpleado.Name = "seIdEmpleado";
+            this.seIdEmpleado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.seIdEmpleado.Size = new System.Drawing.Size(42, 20);
+            this.seIdEmpleado.TabIndex = 24;
+            this.seIdEmpleado.EditValueChanged += new System.EventHandler(this.seIdEmpleado_EditValueChanged);
+            // 
             // frmEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -381,6 +400,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtFirstSurname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSecondName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFirstname.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seIdEmpleado.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,5 +433,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblEmpleado;
+        private DevExpress.XtraEditors.SpinEdit seIdEmpleado;
     }
 }
