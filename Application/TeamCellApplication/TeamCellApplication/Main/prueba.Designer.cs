@@ -30,11 +30,11 @@
         {
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +73,16 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2)});
             this.navBarGroup1.Name = "navBarGroup1";
             // 
+            // navBarItem1
+            // 
+            this.navBarItem1.Caption = "1";
+            this.navBarItem1.Name = "navBarItem1";
+            // 
+            // navBarItem2
+            // 
+            this.navBarItem2.Caption = "2";
+            this.navBarItem2.Name = "navBarItem2";
+            // 
             // navBarGroup2
             // 
             this.navBarGroup2.Caption = "navBarGroup2";
@@ -87,16 +97,6 @@
             // 
             this.navBarGroup4.Caption = "navBarGroup4";
             this.navBarGroup4.Name = "navBarGroup4";
-            // 
-            // navBarItem1
-            // 
-            this.navBarItem1.Caption = "1";
-            this.navBarItem1.Name = "navBarItem1";
-            // 
-            // navBarItem2
-            // 
-            this.navBarItem2.Caption = "2";
-            this.navBarItem2.Name = "navBarItem2";
             // 
             // prueba
             // 

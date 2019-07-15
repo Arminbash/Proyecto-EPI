@@ -41,6 +41,10 @@
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.btnRestore = new System.Windows.Forms.PictureBox();
             this.ContainerPanel = new System.Windows.Forms.Panel();
+            this.officeNavigationBar1 = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
+            this.navigationBarItem1 = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItem2 = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItem3 = new DevExpress.XtraBars.Navigation.NavigationBarItem();
             this.VerticalMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.TittleBar.SuspendLayout();
@@ -49,11 +53,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // VerticalMenu
             // 
             this.VerticalMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.VerticalMenu.Controls.Add(this.officeNavigationBar1);
             this.VerticalMenu.Controls.Add(this.button2);
             this.VerticalMenu.Controls.Add(this.btnEmployee);
             this.VerticalMenu.Controls.Add(this.btnUsers);
@@ -212,6 +218,35 @@
             this.ContainerPanel.Size = new System.Drawing.Size(1050, 600);
             this.ContainerPanel.TabIndex = 2;
             // 
+            // officeNavigationBar1
+            // 
+            this.officeNavigationBar1.AutoSize = false;
+            this.officeNavigationBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.officeNavigationBar1.Items.AddRange(new DevExpress.XtraBars.Navigation.NavigationBarItem[] {
+            this.navigationBarItem1,
+            this.navigationBarItem2,
+            this.navigationBarItem3});
+            this.officeNavigationBar1.Location = new System.Drawing.Point(0, 605);
+            this.officeNavigationBar1.Name = "officeNavigationBar1";
+            this.officeNavigationBar1.Size = new System.Drawing.Size(250, 45);
+            this.officeNavigationBar1.TabIndex = 3;
+            this.officeNavigationBar1.Text = "officeNavigationBar1";
+            // 
+            // navigationBarItem1
+            // 
+            this.navigationBarItem1.Name = "navigationBarItem1";
+            this.navigationBarItem1.Text = "Item1";
+            // 
+            // navigationBarItem2
+            // 
+            this.navigationBarItem2.Name = "navigationBarItem2";
+            this.navigationBarItem2.Text = "Item2";
+            // 
+            // navigationBarItem3
+            // 
+            this.navigationBarItem3.Name = "navigationBarItem3";
+            this.navigationBarItem3.Text = "Item3";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +267,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,5 +286,9 @@
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnEmployee;
+        private DevExpress.XtraBars.Navigation.OfficeNavigationBar officeNavigationBar1;
+        private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItem1;
+        private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItem2;
+        private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItem3;
     }
 }

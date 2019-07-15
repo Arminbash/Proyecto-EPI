@@ -18,7 +18,7 @@ namespace TeamCellApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main.prueba());
+            Application.Run(new Main.frmMain());
         }
     }
 }
