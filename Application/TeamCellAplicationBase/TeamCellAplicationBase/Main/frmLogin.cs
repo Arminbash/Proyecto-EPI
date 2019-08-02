@@ -16,30 +16,5 @@ namespace TeamCellAplicationBase
         {
             InitializeComponent();
         }
-
-        private void labelControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textEdit1_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textEdit2_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblError_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
