@@ -13,13 +13,16 @@ namespace Model
        public TeamCellContext()
            : base("TeamCellContext")
        {
+           //Database.SetInitializer<TeamCellContext>(new DropCreateDatabaseAlways<TeamCellContext>());
        }
-       public virtual DbSet<Employee> Employee { get; set; }
+       public  DbSet<Employee> Employee { get; set; }
+       public DbSet<Client> Client { get; set; }
        protected override void OnModelCreating(DbModelBuilder modelBuilder)
        {
            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
            new Employee.Map(ref modelBuilder);
+           new Client.Map(ref modelBuilder);
 
            base.OnModelCreating(modelBuilder);
        }

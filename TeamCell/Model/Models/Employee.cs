@@ -20,24 +20,24 @@ namespace Model.Models
     public string State { get; set; }
     public bool Status { get; set; }
 
-       public class Map
-       {
-           public Map(ref DbModelBuilder modelBuilder)
-           {
-               modelBuilder.HasDefaultSchema("RRHH");
-               modelBuilder.Entity<Employee>().ToTable("Employee");
+    public class Map
+    {
+        public Map(ref DbModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDefaultSchema("RRHH");
+            modelBuilder.Entity<Employee>().ToTable("Employee");
 
-               modelBuilder.Entity<Employee>().HasKey<int>(s => s.Id);
-               modelBuilder.Entity<Employee>().Property(x => x.Id).HasColumnName("IdEmployee ");
-               modelBuilder.Entity<Employee>().Property(x => x.FirstName).HasColumnName("FirstName").HasMaxLength(50);
-               modelBuilder.Entity<Employee>().Property(x => x.SecondName).HasColumnName("SecondName").HasMaxLength(50);
-               modelBuilder.Entity<Employee>().Property(x => x.FirstSurname).HasColumnName("FirstSurname").HasMaxLength(50);
-               modelBuilder.Entity<Employee>().Property(x => x.SecondSurname).HasColumnName("SecondSurname").HasMaxLength(50);
-               modelBuilder.Entity<Employee>().Property(x => x.BirthDay).HasColumnName("BirthDay").HasColumnType("Datetime");
-               modelBuilder.Entity<Employee>().Property(x => x.IdentificationCard).HasColumnName("IdentificationCard").HasMaxLength(100);
-               modelBuilder.Entity<Employee>().Property(x => x.State).HasColumnName("State").HasMaxLength(50);
-               modelBuilder.Entity<Employee>().Property(x => x.Status).HasColumnName("Status").HasColumnType("bit");
-           }
-       }
+            modelBuilder.Entity<Employee>().HasKey<int>(s => s.Id);
+            modelBuilder.Entity<Employee>().Property(x => x.Id).HasColumnName("IdEmployee");
+            modelBuilder.Entity<Employee>().Property(x => x.FirstName).HasColumnName("FirstName").HasMaxLength(50);
+            modelBuilder.Entity<Employee>().Property(x => x.SecondName).HasColumnName("SecondName").HasMaxLength(50);
+            modelBuilder.Entity<Employee>().Property(x => x.FirstSurname).HasColumnName("FirstSurname").HasMaxLength(50);
+            modelBuilder.Entity<Employee>().Property(x => x.SecondSurname).HasColumnName("SecondSurname").HasMaxLength(50);
+            modelBuilder.Entity<Employee>().Property(x => x.BirthDay).HasColumnName("BirthDay").HasColumnType("Datetime");
+            modelBuilder.Entity<Employee>().Property(x => x.IdentificationCard).HasColumnName("IdentificationCard").HasMaxLength(100);
+            modelBuilder.Entity<Employee>().Property(x => x.State).HasColumnName("State").HasMaxLength(50);
+            modelBuilder.Entity<Employee>().Property(x => x.Status).HasColumnName("Status").HasColumnType("bit");
+        }
+    }
     }
 }

@@ -46,6 +46,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\TeamCellInicializer.cs" />
+    <Compile Include="Migrations\201908120327103_InitialCreate.cs" />
+    <Compile Include="Migrations\201908120327103_InitialCreate.Designer.cs">
+      <DependentUpon>201908120327103_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908120349395_Estado.cs" />
+    <Compile Include="Migrations\201908120349395_Estado.Designer.cs">
+      <DependentUpon>201908120349395_Estado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908120407474_TableClient.cs" />
+    <Compile Include="Migrations\201908120407474_TableClient.Designer.cs">
+      <DependentUpon>201908120407474_TableClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TeamCellContext.cs" />
@@ -56,7 +70,17 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201908120327103_InitialCreate.resx">
+      <DependentUpon>201908120327103_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908120349395_Estado.resx">
+      <DependentUpon>201908120349395_Estado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908120407474_TableClient.resx">
+      <DependentUpon>201908120407474_TableClient.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
