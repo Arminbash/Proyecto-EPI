@@ -36,5 +36,10 @@ namespace TeamCell
         {
             openFormInPanel(new frmUsuarios());
         }
+
+        private void btnEmpleados_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            openFormInPanel(new frmEmpleado());
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Model;
 using Model.Models;
+using System.Data.Entity.Migrations;
 namespace Controller
 {
    public class EmployeeController
@@ -22,6 +23,38 @@ namespace Controller
            catch
            {
                return new List<Employee>();
+           }
+       }
+
+       public bool AddOrUpdateEmployee(Employee emp)
+       {
+           try
+           {
+               using (TeamCellContext _DBContext = new TeamCellContext())
+               {
+                   _DBContext.Employee.AddOrUpdate(emp);
+                   _DBContext.SaveChanges();
+                   return true;
+               }
+           }
+           catch
+           {
+               return false;
+           }
+       }
+
+       public Employee getEmployeeXId(int id)
+       {
+           try
+           {
+               using (TeamCellContext _DBContext = new TeamCellContext())
+               {
+                   return _DBContext.Employee.Where(x => x.IdEmployee == id).FirstOrDefault();
+               }
+           }
+           catch
+           {
+               return new Employee();
            }
        }
     }
