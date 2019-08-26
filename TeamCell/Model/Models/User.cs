@@ -9,7 +9,7 @@ namespace Model.Models
 {
    public class User
     {
-       [DatabaseGenerated(DatabaseGeneratedOption.None)]
+       [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdUser { get; set; }
         public string UserName { get; set; }
         public byte[] Salt { get; set; }

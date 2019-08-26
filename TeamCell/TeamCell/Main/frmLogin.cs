@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controller;
-using TeamCell.Main;
 namespace TeamCell
 {
     public partial class frmLogin : Form

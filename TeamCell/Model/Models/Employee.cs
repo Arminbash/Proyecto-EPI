@@ -9,7 +9,7 @@ namespace Model.Models
 {
    public class Employee
    {
-    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int IdEmployee { get; set; }
     public string FirstName { get; set; }
     public string SecondName { get; set; }
