@@ -47,17 +47,9 @@
   <ItemGroup>
     <Compile Include="Conecction.cs" />
     <Compile Include="DAL\TeamCellInicializer.cs" />
-    <Compile Include="Migrations\201908120327103_InitialCreate.cs" />
-    <Compile Include="Migrations\201908120327103_InitialCreate.Designer.cs">
-      <DependentUpon>201908120327103_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908120349395_Estado.cs" />
-    <Compile Include="Migrations\201908120349395_Estado.Designer.cs">
-      <DependentUpon>201908120349395_Estado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908120407474_TableClient.cs" />
-    <Compile Include="Migrations\201908120407474_TableClient.Designer.cs">
-      <DependentUpon>201908120407474_TableClient.cs</DependentUpon>
+    <Compile Include="Migrations\201908260314364_Intial-Create.cs" />
+    <Compile Include="Migrations\201908260314364_Intial-Create.Designer.cs">
+      <DependentUpon>201908260314364_Intial-Create.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
@@ -74,14 +66,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201908120327103_InitialCreate.resx">
-      <DependentUpon>201908120327103_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908120349395_Estado.resx">
-      <DependentUpon>201908120349395_Estado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908120407474_TableClient.resx">
-      <DependentUpon>201908120407474_TableClient.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908260314364_Intial-Create.resx">
+      <DependentUpon>201908260314364_Intial-Create.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
