@@ -45,7 +45,7 @@ namespace TeamCell
                 {
                     frmMain main = new frmMain();
                     main.idEmpleado = 0;
-                    this.Show(main);
+                    main.Show();
                     this.Visible = false;
                 }
                 else

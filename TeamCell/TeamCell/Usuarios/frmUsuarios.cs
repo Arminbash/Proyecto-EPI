@@ -85,7 +85,7 @@ namespace TeamCell
                 UserController userCont = new UserController();
                 TempUser userTemp = new TempUser();
                 RellenarUsuario(ref userTemp);
-                if (userCont.addUser(userTemp))
+                if (userCont.editUser(userTemp))
                 {
                     MessageBox.Show("Se edito correctamente.");
                     Limpiar();
@@ -103,7 +103,7 @@ namespace TeamCell
                 TempUser userTemp = new TempUser();
                 RellenarUsuario(ref userTemp);
                 userTemp.Password = "12345";
-                if (userCont.addUser(userTemp))
+                if (userCont.editUser(userTemp))
                 {
                     MessageBox.Show("Se edito correctamente.");
                     Limpiar();
