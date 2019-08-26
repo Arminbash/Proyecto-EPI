@@ -60,12 +60,13 @@ namespace Controller
             }
         }
 
-        public bool editUser(User user)
+        public bool editUser(TempUser userTmp)
         {
             try
             {
                  using(TeamCellContext _dbContext = new TeamCellContext())
                  {
+                    User user = convertToUser(userTmp);
                     var userEdit = _dbContext.User.FirstOrDefault(x => x.IdUser == user.IdUser);
                     userEdit.UserName = user.UserName;
                     userEdit.Password = user.Password;
