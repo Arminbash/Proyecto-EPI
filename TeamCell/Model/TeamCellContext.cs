@@ -15,14 +15,17 @@ namespace Model
        {
            //Database.SetInitializer<TeamCellContext>(new DropCreateDatabaseAlways<TeamCellContext>());
        }
-       public  DbSet<Employee> Employee { get; set; }
-       public DbSet<Client> Client { get; set; }
+       public virtual DbSet<Employee> Employee { get; set; }
+       public virtual DbSet<Client> Client { get; set; }
+       public virtual DbSet<User> User { get; set; }
+
        protected override void OnModelCreating(DbModelBuilder modelBuilder)
        {
            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
            new Employee.Map(ref modelBuilder);
            new Client.Map(ref modelBuilder);
+           new User.Map(ref modelBuilder);
 
            base.OnModelCreating(modelBuilder);
        }

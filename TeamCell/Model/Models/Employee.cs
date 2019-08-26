@@ -10,7 +10,7 @@ namespace Model.Models
    public class Employee
    {
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
-       public int Id { get; set; }
+    public int IdEmployee { get; set; }
     public string FirstName { get; set; }
     public string SecondName { get; set; }
     public string FirstSurname { get; set; }
@@ -27,8 +27,8 @@ namespace Model.Models
             modelBuilder.HasDefaultSchema("RRHH");
             modelBuilder.Entity<Employee>().ToTable("Employee");
 
-            modelBuilder.Entity<Employee>().HasKey<int>(s => s.Id);
-            modelBuilder.Entity<Employee>().Property(x => x.Id).HasColumnName("IdEmployee");
+            modelBuilder.Entity<Employee>().HasKey<int>(s => s.IdEmployee);
+            modelBuilder.Entity<Employee>().Property(x => x.IdEmployee).HasColumnName("IdEmployee");
             modelBuilder.Entity<Employee>().Property(x => x.FirstName).HasColumnName("FirstName").HasMaxLength(50);
             modelBuilder.Entity<Employee>().Property(x => x.SecondName).HasColumnName("SecondName").HasMaxLength(50);
             modelBuilder.Entity<Employee>().Property(x => x.FirstSurname).HasColumnName("FirstSurname").HasMaxLength(50);

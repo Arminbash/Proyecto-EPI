@@ -7,20 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Controller;
-namespace TeamCell
+
+namespace TeamCell.Main
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
-        public Form1()
+        public int idEmpleado; 
+        public frmMain()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmMain_Load(object sender, EventArgs e)
         {
-            EmployeeController empCont = new EmployeeController();
-            gridControl1.DataSource = empCont.getEmployees();
+
         }
     }
 }

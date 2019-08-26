@@ -8,14 +8,16 @@ using Model.Models;
 namespace Controller
 {
    public class EmployeeController
-    {
-       TeamCellContext _DBContext = new TeamCellContext();
+    {   
        public List<Employee> getEmployees()
        {
            try
            {
-               var result = _DBContext.Employee.ToList();
-               return result;
+               using( TeamCellContext _DBContext = new TeamCellContext())
+               {
+                   var result = _DBContext.Employee.ToList();
+                   return result;
+               }
            }
            catch
            {
