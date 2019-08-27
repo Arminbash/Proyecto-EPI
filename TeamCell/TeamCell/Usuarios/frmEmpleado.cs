@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model.Models;
 using Controller;
+using TeamCell.Notificacion;
+
 namespace TeamCell
 {
     public partial class frmEmpleado : Form
@@ -55,7 +57,8 @@ namespace TeamCell
                 EmployeeController empCont = new EmployeeController();
                 if (empCont.AddOrUpdateEmployee(emp))
                 {
-                    MessageBox.Show("Se guardo correctamente.");
+                    FrmSuccess.ConfirmacionFrom("Guardado");
+                    //MessageBox.Show("Se guardo correctamente.");
                     Limpiar();
                 }
                 else
@@ -72,7 +75,8 @@ namespace TeamCell
                 EmployeeController empCont = new EmployeeController();
                 if(empCont.AddOrUpdateEmployee(emp))
                 {
-                    MessageBox.Show("Se edito correctamente.");
+                    FrmSuccess.ConfirmacionFrom("Editado");
+                    //MessageBox.Show("Se edito correctamente.");
                     Limpiar();
                 }
                 else

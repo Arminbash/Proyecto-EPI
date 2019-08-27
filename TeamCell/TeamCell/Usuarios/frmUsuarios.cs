@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model.Models;
 using Controller;
+using TeamCell.Notificacion;
+
 namespace TeamCell
 {
     public partial class frmUsuarios : Form
@@ -70,7 +72,8 @@ namespace TeamCell
                 RellenarUsuario(ref userTemp);
                 if (userCont.addUser(userTemp))
                 {
-                    MessageBox.Show("Se guardo correctamente.");
+                    FrmSuccess.ConfirmacionFrom("Guardado");
+                    //MessageBox.Show("Se guardo correctamente.");
                     Limpiar();
                 }
                 else
@@ -87,7 +90,8 @@ namespace TeamCell
                 RellenarUsuario(ref userTemp);
                 if (userCont.editUser(userTemp))
                 {
-                    MessageBox.Show("Se edito correctamente.");
+                    FrmSuccess.ConfirmacionFrom("Edito");
+                    //MessageBox.Show("Se edito correctamente.");
                     Limpiar();
                 }
                 else
