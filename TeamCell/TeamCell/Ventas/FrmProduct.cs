@@ -25,10 +25,9 @@ namespace TeamCell.Ventas
             ProductController prodCont = new ProductController();
             grdcList.DataSource = prodCont.getProduct();
             txtNombreProducto.Text = "";
-            txtPrecio.Text = "";
-            txtCosto.Text = "";
-            txtExistencia.Text = "";
-            dtFecha.DateTime= DateTime.Now;
+            txtPreci.Text = "";
+            txtDescripcion.Text = "";
+            
 
         }
         private void FrmProduct_Load(object sender, EventArgs e)
@@ -39,13 +38,13 @@ namespace TeamCell.Ventas
 
         private void RellenarPrducto( ref Product prod)
         {
-            prod.IdProduct = (int) spIdProduct.Value;
-            prod.NameProduct = txtNombreProducto.Text;
-            prod.Preci = Decimal.Parse(txtPrecio.Text);
-            prod.Cost = Decimal.Parse(txtCosto.Text);
-            prod.Date = dtFecha.DateTime;
-            prod.Existence = Int32.Parse(txtExistencia.Text);
-            prod.Status = true;
+            //prod.IdProduct = (int) spIdProduct.Value;
+            //prod.NameProduct = txtNombreProducto.Text;
+            //prod.Preci = Decimal.Parse(txtPrecio.Text);
+            //prod.Cost = Decimal.Parse(txtCosto.Text);
+            //prod.Date = dtFecha.DateTime;
+            //prod.Existence = Int32.Parse(txtExistencia.Text);
+            //prod.Status = true;
 
         }
 
@@ -89,14 +88,14 @@ namespace TeamCell.Ventas
         {
             if (spIdProduct.Value>0)
             {
-                Product prod = new Product();
-                ProductController prodCont =new ProductController();
-                prod = prodCont.getIdProduct((int) spIdProduct.Value);
-                txtNombreProducto.Text = prod.NameProduct;
-                txtPrecio.Text = Convert.ToString(prod.Preci);
-                txtCosto.Text = Convert.ToString(prod.Cost);
-                dtFecha.DateTime = prod.Date;
-                txtExistencia.Text = Convert.ToString(prod.Existence);
+                //Product prod = new Product();
+                //ProductController prodCont =new ProductController();
+                //prod = prodCont.getIdProduct((int) spIdProduct.Value);
+                //txtNombreProducto.Text = prod.NameProduct;
+                //txtPrecio.Text = Convert.ToString(prod.Preci);
+                //txtCosto.Text = Convert.ToString(prod.Cost);
+                //dtFecha.DateTime = prod.Date;
+                //txtExistencia.Text = Convert.ToString(prod.Existence);
 
             }
         }

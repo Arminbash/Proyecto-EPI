@@ -10,14 +10,23 @@ namespace Model.Models
 {
   public  class Product
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdProduct { get; set; }
-        public string NameProduct { get; set; }
-        public DateTime Date { get; set; }
-        public decimal Preci { get; set; }
-        public decimal Cost { get; set; }
-        public int Existence { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Costing { get; set; }
+        public string Description { get; set; }
+        public Nullable<int> Id_Brand { get; set; }
+        public Brand Brand { get; set; }
+        public Nullable<int> Id_Provider { get; set; }
+        public Provider Provider { get; set; }
+
         public bool Status { get; set; }
+
+        
+
+
+
+
 
         public class Map
         {
@@ -26,15 +35,19 @@ namespace Model.Models
                 modelbuilder.HasDefaultSchema("Product");
                 modelbuilder.Entity<Product>().ToTable("Product");
 
-                modelbuilder.Entity<Product>().HasKey<int>(s => s.IdProduct);
-                modelbuilder.Entity<Product>().Property(x => x.IdProduct).HasColumnName("IdProduct");
-                modelbuilder.Entity<Product>().Property(x => x.NameProduct).HasColumnName("NameProduct").HasMaxLength(50);
-                modelbuilder.Entity<Product>().Property(x => x.Date).HasColumnName("Date").HasColumnType("DateTime");
-                modelbuilder.Entity<Product>().Property(x => x.Preci).HasColumnName("Preci").HasColumnType("Decimal");
-                modelbuilder.Entity<Product>().Property(x => x.Cost).HasColumnName("Cost").HasColumnType("Decimal");
-                modelbuilder.Entity<Product>().Property(x => x.Existence).HasColumnName("Existence").HasColumnType("int");
+                modelbuilder.Entity<Product>().HasKey<int>(s => s.Id);
+                modelbuilder.Entity<Product>().Property(x => x.Id).HasColumnName("Id");
+                modelbuilder.Entity<Product>().Property(x => x.Name).HasColumnName("NameProduct").HasMaxLength(50);
+                modelbuilder.Entity<Product>().Property(x => x.Costing).HasColumnName("Preci").HasMaxLength(100);
+                modelbuilder.Entity<Product>().Property(x => x.Description).HasColumnName("Description").HasMaxLength(100);
+                modelbuilder.Entity<Product>().Property(x => x.Id_Brand).HasColumnName("IdBrand");
+                modelbuilder.Entity<Product>().Property(x => x.Id_Provider).HasColumnName("IdProvider");
                 modelbuilder.Entity<Product>().Property(x => x.Status).HasColumnName("Status").HasColumnType("bit");
+                
+               
             }
         }
+
+        
     }
 }

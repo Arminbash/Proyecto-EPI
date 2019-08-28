@@ -51,15 +51,15 @@ namespace Controller.Controllers
             {
                 using (TeamCellContext _BDContext = new TeamCellContext())
                 {
-                    return _BDContext.Product.Where(x => x.IdProduct == id).FirstOrDefault();
+                    return _BDContext.Product.Where(x => x.Id == id).FirstOrDefault();
                 }
 
             }
             catch (Exception e)
             {
-                return  new Product();
+                return new Product();
             }
-           
+
         }
     }
 }

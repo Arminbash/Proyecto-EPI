@@ -10,7 +10,6 @@ namespace Model.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "Model.TeamCellContext";
         }
 
         protected override void Seed(Model.TeamCellContext context)
